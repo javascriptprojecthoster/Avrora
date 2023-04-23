@@ -1,0 +1,73 @@
+/* --- CARD --- */
+
+.card {
+  position: relative;
+  min-width: 270px;
+  transition: all 0.3s ease;
+}
+.card:hover .card__more_mobile {
+  display: block;
+}
+.card__background {
+  position: absolute;
+  background: #7d122e;
+  top: 0;
+  left: 0;
+  margin-top: 200%;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.card:hover .card__background {
+  margin-top: 0;
+  z-index: 1;
+}
+.card__more {
+  position: relative;
+  margin-left: 30px;
+}
+.card__more::before {
+  content: url("../img/cards/house.svg");
+  position: absolute;
+  top: 5px;
+  left: -30px;
+}
+.card:hover {
+  justify-content: start;
+}
+
+.card:hover .card__info {
+  display: block;
+  z-index: 2;
+}
+
+.card__subtitle {
+    display: none;
+  }
+
+  @media(max-width:768px){
+    .card__subtitle {
+        display: block;
+      }
+      .card__more_mobile {
+        display: block;
+      }
+      .card__info {
+        display: block;
+        z-index: 2;
+      }
+  }
+
+/* --- CARD --- */
+
+.question{
+    display: none;
+}
+
+@media(max-width:320px){
+    .question{
+        display: block;
+    }
+  }
